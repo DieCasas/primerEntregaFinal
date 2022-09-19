@@ -41,6 +41,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-decoration: none;
 }
 
 nav {
@@ -111,12 +112,32 @@ li:hover {
   "products products products products";
   gap: 20px;
   margin-top: 20px;
-  
+  text-decoration: none;
 }
 
 #products {
   grid-area: "products";
 }
-.fondoGrilla{
+
+
+.containerButton {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
   
+}
+
+.buttonMas{
+  font-size: 17px;
+}
+
+.buttonMenos{
+ font-size: 18px;
+}
+
+.buttonCart {
+  display: flex;
+  justify-content: center;
 }

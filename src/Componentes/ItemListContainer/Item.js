@@ -7,21 +7,21 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import {styles}  from './stylesItem'
 
-export default function MediaCard({ info }) {
+export default function MediaCard({ data }) {
   return (
     <Card sx={ {maxWidth: 359}}>
       <CardMedia
         component="img"
         height="220"
-        image= {info.thumbnail_url}
+        image= {data.thumbnail_url}
         alt="green iguana"
       />
       <CardContent >
         <Typography gutterBottom variant="h5" component="div">
-          {info.name}
+          {data.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {info.description}
+          {data.description}
         </Typography>
       </CardContent>
         <CardActions sx={styles.buttonContainer}>

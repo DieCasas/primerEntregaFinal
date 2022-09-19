@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Item from '../ItemListContainer/Item'
+import { Link } from 'react-router-dom'
 
 const ItemList = () => {
 
@@ -26,14 +27,17 @@ const ItemList = () => {
     console.log(harrys);
 
 
-
-    //const harry = harrys.filter(user => user.id === 1)
-
     return (
         <div id='gridCards'>
-            {harrys.map((user) => { 
-                return < Item id="products" key={user.id} info={user} />;
-                })}
+            {harrys.map((user) => {
+				return (
+					<div key={user.id}>
+						<Link to={`/detail/${user.id}`} className='Link'>
+							<Item data={user} />
+						</Link>
+					</div>
+				);
+			})}
         </div>
     )
 }

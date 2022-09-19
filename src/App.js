@@ -1,11 +1,12 @@
-import '../src/App'
+import '../src/App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ItemDetailContainer from './Componentes/ItemDetailContainer/ItemDetailContainer';
 
 /** Componentes */
 import NavBar from './Componentes/NavBar';
 import Home from './Componentes/home/Home'
-import Veggie from './Componentes/Veggie/Veggie'
-import Nosotros from './Componentes/Nosotros/Nosotros'
+import Cart from './Componentes/Cart/Cart'
+
 
 function App() {
   return (
@@ -14,8 +15,8 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path='/' element={<Home/>} />
-            <Route path='/Ofertas' element={<Veggie/>} />
-            <Route path='/Nosotros' element={<Nosotros />} />
+            <Route path='/detail/:id' element={<ItemDetailContainer />} />
+            <Route path='/Cart' element={<Cart />}/>
           </Routes>
         </div>
     </Router>
